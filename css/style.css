@@ -4,6 +4,10 @@
 	box-sizing: border-box;
     font-family: 'PT Sans Narrow', sans-serif;
     color: rgb(222, 219, 219);
+    /* Scroll smooth */
+    scroll-behavior: smooth;
+    /* Blue highlight on click */
+    -webkit-tap-highlight-color: transparent;
 }
 body{
     background: rgb(21, 21, 21)
@@ -38,7 +42,7 @@ margin: 10px;
     height: 100vh;
 }
 .headerWidth{
-    background-color: rgba(39, 38, 38, 0.454);
+    background-color: rgba(5, 5, 5, 0.879);
     height: 100vh;
 }
 .header{
@@ -47,17 +51,11 @@ margin: 10px;
     margin: 0 auto;
     padding-top: 15%;
 }
-.header h1{
-    padding: 10px;
-    font-size: 70px;
-    letter-spacing: 2px;
-    color: rgb(172, 169, 169);
-}
 /* Hanging photo in firstSection*/
 .swing {
     animation: swing ease-in-out 1.5s infinite alternate;
     transform-origin: center -20px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.546);
     display: inline-block;
     position: absolute;
     top: 35%;
@@ -98,8 +96,6 @@ margin: 10px;
     width: 700px;
     margin: 0 auto;
 }
-
-
 /*  */
 /* skills and languages general */
 /*  */
@@ -165,14 +161,17 @@ section ul li p{
     margin: 20px;
 }
 .portfolio a{
-    font-size: 30px;
+    font-size: 22px;
     text-decoration:none;
 }
 .portfolio a:hover{
-    color: rgb(71, 71, 74);
+    color: rgb(28, 197, 231);
 }
 .kuboWeb a{
     display: block;
+}
+.hoverPhoto:hover{
+    box-shadow: -1px -1px 41px -4px rgb(28, 197, 231);
 }
 /*  */
 /* footer */
@@ -194,4 +193,48 @@ section ul li p{
 }
 .contactH2{
     padding-top: 100px;
+}
+/*  */
+/* naw menu */
+/*  */
+.navMenu{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    z-index: 40;
+    transform: translate(-50%, -50%); 
+}
+.navName{
+    font-size: 70px;
+    letter-spacing: 4px;
+}
+.navChoices a{
+    margin-top: 2px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.navChoices a:hover{
+    color: rgb(28, 197, 231);
+}
+/*  */
+/* Arrow up */
+/*  */
+.arrowRow{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.scrollUp{
+    z-index: 99;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+.scrollUp i{
+    color: #6d6c6d;
+    font-size: 50px;
+    background-color: rgb(37, 37, 37);
+    border-radius: 6px;
 }
