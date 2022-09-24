@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: rgb(222, 219, 219);
+}
+body{
+    background: rgb(21, 21, 21)
+}
+ul li {
+    list-style: none;
+}
+.sectionHeader{
+    text-align: center;
+    margin: 100px 0 30px 0;
+}
+p{
+    font-size: 20px;
+}
+/* font Awesome */
+.fas,.far{
+margin: 10px;
+}
+.fa-instagram{
+    font-size: 50px;
+    color: purple;
+}
+/*  */
+/* aboutMe/foto */
+/*  */
+.aboutBacground{
+    position: relative;
+    background-image: url(/img/2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.headerWidth{
+    background-color: rgba(39, 38, 38, 0.454);
+    height: 100vh;
+}
+.header{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 15%;
+}
+.header p{
+    width: 35%;
+    padding: 10px;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.header h1{
+    padding: 10px;
+    font-size: 70px;
+    letter-spacing: 2px;
+    color: rgb(172, 169, 169);
+}
+/* Hanging photo in firstSection*/
+.swing {
+    animation: swing ease-in-out 1.5s infinite alternate;
+    transform-origin: center -20px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 760px;
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid rgb(6, 6, 6);
+    top: -10px; left: 43%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 47%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(10deg); }
+    100% { transform: rotate(-10deg); }
+}
+
+
+
+/*  */
+/* skills and languages general */
+/*  */
+.skillsAndLang{
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flexSkills{
+    flex: 50%;
+}
+.flexLanguages{
+    flex: 50%;
+}
+.languages p{
+    padding-top: 10px;
+}
+
+
+.skillsAndLang{
+    text-align: center;
+}
+section ul li p{
+    display: inline-block;
+    width: 150px;
+}
+/*  */
+/* skills */
+/*  */
+.full{
+    width: 50px;
+    height: 20px;
+    background-color: rgba(45, 138, 20, 0.737);
+    border: 3px solid black;
+    border-radius: 6px;
+    display: inline-block;
+}
+.empty{
+    border: 3px solid black;
+    width: 50px;
+    height: 20px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+
+
+/*  */
+/* languages */
+/*  */
+.centerP{
+    text-align: left;
+}
+
+/*  */
+/* portfolio */
+/*  */
+.kuboWeb{
+    display: inline-block;
+}
+.portfolio{
+    text-align: center;
+}
+.portfolio div{
+    margin: 20px;
+}
+.portfolio a{
+    font-size: 30px;
+    text-decoration:none;
+}
+.portfolio a:hover{
+    color: rgb(71, 71, 74);
+}
+.kuboWeb a{
+    display: block;
+}
+/*  */
+/* footer */
+/*  */
+.footer{
+    background-color: #000;
+    height: 300px;
+    text-align: center;
+}
+.contact{
+    font-size: 20px;
+   padding-top: 70px;
+}
+.contact a{
+    text-decoration: none;
+}
+.instagram{
+    padding-top: 10px;
+    display: block;
+}
