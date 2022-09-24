@@ -47,13 +47,6 @@ margin: 10px;
     margin: 0 auto;
     padding-top: 15%;
 }
-.header p{
-    width: 35%;
-    padding: 10px;
-    font-size: 22px;
-    letter-spacing: 2px;
-}
-
 .header h1{
     padding: 10px;
     font-size: 70px;
@@ -98,7 +91,13 @@ margin: 10px;
     0% { transform: rotate(10deg); }
     100% { transform: rotate(-10deg); }
 }
-
+/*  */
+/* about */
+/*  */
+.about p{
+    width: 700px;
+    margin: 0 auto;
+}
 
 
 /*  */
@@ -146,9 +145,6 @@ section ul li p{
     border-radius: 6px;
     display: inline-block;
 }
-
-
-
 /*  */
 /* languages */
 /*  */
@@ -183,12 +179,11 @@ section ul li p{
 /*  */
 .footer{
     background-color: #000;
-    height: 300px;
+    height: 400px;
     text-align: center;
 }
 .contact{
     font-size: 20px;
-   padding-top: 70px;
 }
 .contact a{
     text-decoration: none;
@@ -196,4 +191,7 @@ section ul li p{
 .instagram{
     padding-top: 10px;
     display: block;
+}
+.contactH2{
+    padding-top: 100px;
 }
