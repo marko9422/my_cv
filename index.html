@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS app</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
 
 </head>
 <!-- web preloader -->
@@ -28,7 +25,7 @@
 
         <section id="header" class="nav">
             <nav class="navMenu">
-                <h2 class="navName">MARKO SARCEVIC</h2>
+                <h2 class="navName">MARKO&nbspSARCEVIC</h2>
                 <div class="navChoices">
                     <a href="#about_me">ABOUT ME</a>
                     <a href="#skills">SKILLS</a>
@@ -50,7 +47,8 @@
         
         <section class="about">
             <h2 id="about_me" class="sectionHeader"><i class="fas fa-address-card"></i>ABOUT ME</h2>
-            <p>Programimg is my hobby, therefore I decided to enhance my programing skills. I have just returned back to Bratislava and this way I am looking for experiences in form full/part-time job or internship in web development. </p>
+            <p>I am looking for full/part-time job or internship.</p>
+            <p>Programimg is my hobby, therefore I decided to enhance my programing skills. I have just returned back to Bratislava and this way I am looking for experiences in web development. </p>
             <p>In the future I would like to start working with React or other javascript frameworks. I am currently learning how to use laravel framework.</p>
 
         </section>
@@ -156,13 +154,13 @@
             <h2 id="portfolio" class="sectionHeader"><i class="fas fa-list"></i>PORTFOLIO</h2>
             <div class="kuboWeb">
                 <a target="_blank" href="https://www.jakubhanzl.com">jakubhanzl.com</a>
-                <a target="_blank" href="https://www.jakubhanzl.com"><video autoplay loop muted plays-inline width="400px" class="hoverPhoto">
+                <a target="_blank" href="https://www.jakubhanzl.com"><video class="images" autoplay loop muted plays-inline width="400px" class="hoverPhoto">
                     <source src="/img/kuboWeb.mp4" type='video/mp4'>
                 </video></a>
             </div>
             <div class="kuboWeb">
                 <a target="_blank" href="https://marko-sarcevic.eu/login.php">SQL Databaze login form</a>
-                <a target="_blank" href="https://marko-sarcevic.eu/login.php"><img class="hoverPhoto" width="400px" src="img/3.png"></a>
+                <a target="_blank" href="https://marko-sarcevic.eu/login.php"><img class="images" class="hoverPhoto" width="400px" src="img/3.png"></a>
             </div>
             <div>
                 <a target="_blank" href="">GitHub</a>
@@ -188,7 +186,9 @@
         </div>
         
         
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
 <!-- preloader -->
 <script>
     $(window).on('load',function(){
@@ -200,5 +200,6 @@
 
 </body>
 <script src="js.js"></script>
+
 
 </html>

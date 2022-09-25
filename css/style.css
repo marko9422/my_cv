@@ -33,6 +33,12 @@ margin: 10px;
     font-size: 50px;
     color: purple;
 }
+h2,.fas{
+    color: rgb(16, 143, 169);
+}
+.fas.fa-phone{
+    color: rgb(222, 219, 219);
+}
 /*  */
 /* aboutMe/foto */
 /*  */
@@ -96,8 +102,10 @@ margin: 10px;
 /* about */
 /*  */
 .about p{
-    width: 700px;
+    text-align: center;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 20px 15px 0 15px;
 }
 /*  */
 /* skills and languages general */
@@ -117,14 +125,12 @@ margin: 10px;
 .languages p{
     padding-top: 10px;
 }
-
-
 .skillsAndLang{
     text-align: center;
 }
 section ul li p{
     display: inline-block;
-    width: 150px;
+    width: 120px;
 }
 /*  */
 /* skills */
@@ -209,7 +215,8 @@ section ul li p{
     transform: translate(-50%, -50%); 
 }
 .navName{
-    font-size: 70px;
+    margin-top: -13px;
+    font-size: 95px;
     letter-spacing: 4px;
 }
 .navChoices a{
@@ -219,7 +226,7 @@ section ul li p{
     letter-spacing: 2px;
 }
 .navChoices a:hover{
-    color: rgb(28, 197, 231);
+    color: rgb(16, 143, 169);
 }
 /*  */
 /* Arrow up */
@@ -344,3 +351,72 @@ section ul li p{
       transform: rotate(360deg);
     }
   }
+
+  /*  */
+  /* Responzivity */
+  /*  */
+  @media screen and (max-width: 850px){
+    section ul li p {
+        width: 100px;
+    }
+    .full {
+        width: 45px;
+        height: 17px;
+        border: 2px solid black;
+    }
+    .empty {
+        width: 45px;
+        height: 17px;
+        border: 2px solid black;
+    }
+}
+  @media screen and (max-width: 1000px){
+    .navName {
+        margin-top: -5px;
+        font-size: 45px;
+        letter-spacing: 4px;
+    }
+}
+  @media screen and (max-width: 700px){
+    .sectionHeader {
+        margin: 60px 0 30px 0;
+    }
+    .skillsAndLang{
+        display: block;
+    }
+}
+  @media screen and (max-width: 450px){
+    .images{
+        width: 100%;
+    }
+    .navName {
+        margin-top: 1px;
+        font-size: 26px;
+    }
+    .navChoices a{
+        font-size: 24px;
+    }
+    .portfolio div {
+        margin-top: 30px;
+    }
+    .contact a{
+        display: block;
+    }
+}
+  @media screen and (max-width: 375px){
+    .navName {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    section ul li p {
+        width: 91px;
+    }
+    .full,.empty {
+        width: 38px;
+    }
+}
+
+
+
+
+
