@@ -155,7 +155,7 @@
             <div class="kuboWeb">
                 <a target="_blank" href="https://www.jakubhanzl.com">jakubhanzl.com</a>
                 <a target="_blank" href="https://www.jakubhanzl.com"><video class="images hoverPhoto" autoplay loop muted plays-inline width="400px">
-                    <source src="/img/kuboWeb.mp4" type='video/mp4'>
+                    <source src="img/kuboWeb.mp4" type='video/mp4'>
                 </video></a>
             </div>
             <div class="kuboWeb">
