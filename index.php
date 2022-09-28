@@ -1,3 +1,4 @@
+<?php  include 'connection.php';  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS app</title>
+    <!-- measure time spended on the web. -->
+    <script>  startTime = new Date(); </script>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +23,17 @@
 </div>  
 
 
-<body>
+<body onbeforeunload='measureTime()'>
+
+<?php
+    $select = mysqli_query($conn,'SELECT * FROM duration');
+    while($s = mysqli_fetch_array($select)){
+        $dur = $s['time'];
+        $dur = $dur/1000;
+
+        echo $dur.'sec <br>';
+    }
+?>
     
     <div class="container">
 
@@ -196,6 +210,26 @@ crossorigin="anonymous"></script>
             $('.container').fadeIn(1000);   
         });
     })
+
+    // Measure time spended on the web.
+    function measureTime(){
+        endTime = new Date();
+
+        $.ajax({
+            url: 'addDur.php',
+            method: 'POST',
+            data: {
+                duration: endTime - startTime,
+            }
+
+            
+        });
+
+    };
+
+
+
+    
 </script>
 
 </body>
