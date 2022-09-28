@@ -26,14 +26,22 @@ crossorigin="anonymous"></script>
 <body onbeforeunload="myFunc()">
 
 <?php
+// Time on web.
     $select = mysqli_query($conn,'SELECT * FROM duration');
     while($s = mysqli_fetch_array($select)){
         $dur = $s['time'];
         $dur = $dur/1000;
         echo $dur.'sec <br>';
+
     }
+// User data.
+    $query = @unserialize (file_get_contents('http://ip-api.com/php/'));
+    foreach ($query as $data) {
+        echo $data . "<br>";
+}
+
+
 ?>
-    
     <div class="container">
 
         <section id="header" class="nav">
