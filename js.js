@@ -1,3 +1,4 @@
+'use strict';
 // arrow Up
 const arrowUp = document.getElementById('arrowUp')
 window.addEventListener('scroll',function(){
@@ -8,3 +9,7 @@ window.addEventListener('scroll',function(){
         arrowUp.style.display = 'none'
     }
 })
+
+
+
+

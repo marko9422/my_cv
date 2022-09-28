@@ -6,31 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS app</title>
-    <!-- measure time spended on the web. -->
-    <script>  startTime = new Date(); </script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+    <script> startTime = new Date(); </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+   
 
 </head>
 <!-- web preloader -->
 <div class="loader">
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>  
-
-
-<body onbeforeunload='measureTime()'>
+<body onbeforeunload="myFunc()">
 
 <?php
     $select = mysqli_query($conn,'SELECT * FROM duration');
     while($s = mysqli_fetch_array($select)){
         $dur = $s['time'];
         $dur = $dur/1000;
-
         echo $dur.'sec <br>';
     }
 ?>
@@ -198,41 +197,30 @@
                 <a href="#header"><i class="fas fa-arrow-up"></i></a>
             </div>
         </div>
-        
-        
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-crossorigin="anonymous"></script>
-<!-- preloader -->
+           
+        <!-- preloader -->
 <script>
     $(window).on('load',function(){
         $('.loader').fadeOut(1000,function(){
             $('.container').fadeIn(1000);   
         });
     })
-
-    // Measure time spended on the web.
-    function measureTime(){
-        endTime = new Date();
-
-        $.ajax({
-            url: 'addDur.php',
-            method: 'POST',
-            data: {
-                duration: endTime - startTime,
-            }
-
-            
-        });
-
-    };
-
-
-
-    
 </script>
+    <script>
+        function myFunc(){
+            endTime = new Date();
+            $.ajax({
+            url:'addDur.php',
+            method:'POST',
+            data:{
+                duration:endTime - startTime,
+            }
+            });
+        }
+    </script>
 
 </body>
+
 <script src="js.js"></script>
 
 
