@@ -25,16 +25,6 @@ crossorigin="anonymous"></script>
 </div>  
 <body onbeforeunload="myFunc()">
 
-<?php
-
-// User data.
-    $query = @unserialize (file_get_contents('http://ip-api.com/php/'));
-    foreach ($query as $data) {
-        echo $data . "<br>";
-}
-
-
-?>
     <div class="container">
 
         <section id="header" class="nav">
