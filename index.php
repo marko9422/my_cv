@@ -51,9 +51,9 @@ crossorigin="anonymous"></script>
         
         <section class="about">
             <h2 id="about_me" class="sectionHeader"><i class="fas fa-address-card"></i>ABOUT ME</h2>
-            <p>I am looking for full/part-time job or internship.</p>
-            <p>Programimg is my hobby, therefore I decided to enhance my programing skills. I have just returned back to Bratislava and this way I am looking for experiences in web development. </p>
-            <p>In the future I would like to start working with React or other javascript frameworks. I am currently learning how to use laravel framework.</p>
+            <p>I am looking for internship | full-time or part-time job opportunities. </p>
+            <p>Programing is my hobby, therefore I decided to enhance my programing skills throught internship or job. I spent 3 years living and working abroad. Currently I am living in Bratislava and my priority is to get some experiences in web development.
+            </p>
 
         </section>
 
@@ -113,13 +113,21 @@ crossorigin="anonymous"></script>
                 <li>
                     <p>SQL</p>
                     <div class="full"></div>
-                    <div class="empty"></div>
+                    <div class="full"></div>
                     <div class="empty"></div>
                     <div class="empty"></div>
                     <div class="empty"></div>
                 </li>
                 <li>
                     <p>Git/GitHub</p>
+                    <div class="full"></div>
+                    <div class="full"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                    <div class="empty"></div>
+                </li>
+                <li>
+                    <p>REACT</p>
                     <div class="full"></div>
                     <div class="empty"></div>
                     <div class="empty"></div>
@@ -167,7 +175,7 @@ crossorigin="anonymous"></script>
                 <a target="_blank" href="https://marko-sarcevic.eu/login.php"><img class="images hoverPhoto"  width="400px" src="img/3.png"></a>
             </div>
             <div>
-                <a target="_blank" href="">GitHub</a>
+                <a target="_blank" href="https://github.com/marko9422">GitHub</a>
             </div>
             
         </section>
