@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS app</title>
-    <script> startTime = new Date(); </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
@@ -23,7 +22,26 @@ crossorigin="anonymous"></script>
 <div class="loader">
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 </div>  
-<body onbeforeunload="myFunc()">
+<body>
+
+<?php
+// User data.
+    // $ip = $_SERVER['REMOTE_ADDR'];
+
+// !!!!!!   my ip  change on the live server !!!!!!!
+    $ip = '81.92.249.216';
+
+    $location =  json_decode(file_get_contents("http://ipinfo.io/{$ip}"));
+    $city = $location->city;
+    $date = date("Y-m-d h:i:sa");
+
+    if ($ip == '81.92.249.2716'){
+
+    } else{
+        mysqli_query($conn,"INSERT INTO duration (date_time, ip, city) VALUES('$date','$ip','$city')");
+    }
+
+ ?>
 
     <div class='container'>
 
@@ -205,17 +223,6 @@ crossorigin="anonymous"></script>
         });
     })
 
-   
-    function myFunc(){
-        endTime = new Date();
-        $.ajax({
-        url:'addDur.php',
-        method:'POST',
-        data:{
-            duration:(endTime - startTime)/1000,
-        }
-        });
-    }
 </script>
 
 </body>
