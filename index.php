@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS app</title>
+    <script> startTime = new Date(); </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 crossorigin="anonymous"></script>
-    <script> startTime = new Date(); </script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="css/fontawesome-free-5.15.1-web/css/all.min.css">
@@ -25,10 +25,10 @@ crossorigin="anonymous"></script>
 </div>  
 <body onbeforeunload="myFunc()">
 
-    <div class="container">
+    <div class='container'>
 
-        <section id="header" class="nav">
-            <nav class="navMenu">
+        <section id='header' class='nav'>
+            <nav class='navMenu'>
                 <h2 class="navName">MARKO&nbspSARCEVIC</h2>
                 <div class="navChoices">
                     <a href="#about_me">ABOUT ME</a>
@@ -204,19 +204,19 @@ crossorigin="anonymous"></script>
             $('.container').fadeIn(1000);   
         });
     })
-</script>
-    <script>
-        function myFunc(){
-            endTime = new Date();
-            $.ajax({
-            url:'addDur.php',
-            method:'POST',
-            data:{
-                duration:(endTime - startTime)/1000,
-            }
-            });
+
+   
+    function myFunc(){
+        endTime = new Date();
+        $.ajax({
+        url:'addDur.php',
+        method:'POST',
+        data:{
+            duration:(endTime - startTime)/1000,
         }
-    </script>
+        });
+    }
+</script>
 
 </body>
 
